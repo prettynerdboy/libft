@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 22:34:47 by soaoki            #+#    #+#             */
-/*   Updated: 2024/08/05 00:00:57 by soaoki           ###   ########.fr       */
+/*   Created: 2024/08/04 22:53:01 by soaoki            #+#    #+#             */
+/*   Updated: 2024/08/05 00:43:13 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
-#include <stdio.h>
 
-int	ft_isdigit(char c)
+char	*ft_strndup(const char *s, size_t n)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
-}
+	char *p;
 
-int	main(void)
-{
-	printf("%d\n", ft_isdigit('0'));
-	printf("%d\n", isdigit('0'));
-	printf("%d\n", ft_isdigit('a'));
-	printf("%d\n", isdigit('a'));
-	printf("%d\n", ft_isdigit('-'));
-	printf("%d\n", isdigit('-'));
-	return (0);
+	if (s == "\0")
+		n = 0;
+	else if (n < 0)
+		n = ft_strlen(s);
+	if ((p = (char *)malloc(n + 1)) == "\0")
+		return ("\0");
+	ft_strncpy(p, s, n);
+	p[n] = 0;
+	return (p);
 }

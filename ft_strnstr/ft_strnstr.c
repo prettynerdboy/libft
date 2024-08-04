@@ -6,34 +6,40 @@
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 17:58:27 by soaoki            #+#    #+#             */
-/*   Updated: 2024/08/02 01:58:00 by soaoki           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:32:34 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strnstr(const char *str, const char *to_find, unsigned int len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	unsigned int	i;
 	unsigned int	j;
 
 	i = 0;
-	if (!str && !len)
+	//走査する文字列が空の時、検索バイトが0の時0を返す//
+	if (!haystack && !len)
 		return (0);
-	if (to_find[0] == '\0' || to_find == str)
-		return ((char *)str);
-	while (str[i] != '\0')
+	//探す文字列が空、走査文字列と検索文字列が完全一致する時haystackを返す//
+	if (needle[0] == '\0' || needle == haystack)
+		return ((char *)haystack);
+	while (haystack[i] != '\0')
 	{
+		// haystackのi＋j番目がneedleと一致する時jをカウントし、needleが終端に達する時、先頭ポインタ+iしたポインタを返す。//
 		j = 0;
-		while (str[i + j] == to_find[j] && (i + j) < len)
+		while (haystack[i + j] == needle[j] && (i + j) < len)
 		{
-			if (str[i + j] == '\0' && to_find[j] == '\0')
-				return ((char *)&str[i]);
+			if (haystack[i + j] == '\0' && needle[j] == '\0')
+				// haystackのi+j番目から終端までとneedleのj番目から終端までが完全に一致する時はhaystackのi番目のポインタを返す。//
+				return ((char *)&haystack[i]);
 			j++;
 		}
-		if (to_find[j] == '\0')
-			return ((char *)(str + i));
+		if (needle[j] == '\0')
+			return ((char *)(haystack + i));
+		// haystackのi番目がneedleの0番目と一致した時だけjはカウントされる。偽の時はiをカウントする。jをカウントしても終端に達しない時はiをカウントしてjを初期化する。//
 		i++;
 	}
 	return (0);

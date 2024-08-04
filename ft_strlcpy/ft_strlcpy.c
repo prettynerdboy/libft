@@ -6,24 +6,16 @@
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 18:31:49 by soaoki            #+#    #+#             */
-/*   Updated: 2024/06/11 17:12:01 by soaoki           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:31:11 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-int	ft_strlen(char *c)
-{
-	int	i;
 
-	i = 0;
-	while (c[i] != 0)
-		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	int	i;
 	int	len;

@@ -6,14 +6,15 @@
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 02:05:29 by soaoki            #+#    #+#             */
-/*   Updated: 2024/06/15 18:24:13 by soaoki           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:41:59 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-int	ft_memcmp(const void *s1, const void *s2, unsigned n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*d;
 	unsigned char	*s;

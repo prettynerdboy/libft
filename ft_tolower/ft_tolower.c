@@ -6,10 +6,11 @@
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 18:13:41 by soaoki            #+#    #+#             */
-/*   Updated: 2024/06/11 18:39:48 by soaoki           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:23:10 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <ctype.h>
 #include <stdio.h>
 

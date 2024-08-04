@@ -6,14 +6,15 @@
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 17:10:04 by soaoki            #+#    #+#             */
-/*   Updated: 2024/06/09 17:46:26 by soaoki           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:04:33 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memcpy(void *dst, const void *src, unsigned int n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	int		i;
 	char	*c;

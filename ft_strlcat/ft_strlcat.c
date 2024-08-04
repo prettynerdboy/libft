@@ -6,14 +6,15 @@
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 17:21:59 by soaoki            #+#    #+#             */
-/*   Updated: 2024/06/11 17:51:21 by soaoki           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:44:39 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	unsigned int	dest_len;
 	unsigned int	src_len;

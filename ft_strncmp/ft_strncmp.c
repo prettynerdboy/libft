@@ -6,11 +6,13 @@
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 02:01:16 by soaoki            #+#    #+#             */
-/*   Updated: 2024/06/15 02:08:48 by soaoki           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:38:12 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(char *s1, char *s2, size_t n)
 {
 	unsigned int	i;
 
@@ -29,8 +31,6 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	return (0);
 }
-#include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {

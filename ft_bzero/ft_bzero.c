@@ -6,12 +6,11 @@
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:08:42 by soaoki            #+#    #+#             */
-/*   Updated: 2024/04/19 01:32:07 by soaoki           ###   ########.fr       */
+/*   Updated: 2024/08/04 23:52:23 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h" 
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -26,12 +25,12 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-int	main(void)
-{
-	char	s1[10] = "abcdefg";
-	char	s2[10] = "abcdefg";
+// int	main(void)
+// {
+// 	char	s1[10] = "abcdefg";
+// 	char	s2[10] = "abcdefg";
 
-	printf("%s\n", bzero(s1, 1));
-	ft_bzero(s2, 1);
-	printf("%s\n", s2);
-}
+// 	printf("%s\n", bzero(s1, 1));
+// 	ft_bzero(s2, 1);
+// 	printf("%s\n", s2);
+// }

@@ -6,22 +6,14 @@
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 01:17:11 by soaoki            #+#    #+#             */
-/*   Updated: 2024/06/15 01:55:52 by soaoki           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:33:23 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-int	ft_strlen(char *c)
-{
-	int	i;
-
-	i = 0;
-	while (c[i] != 0)
-		i++;
-	return (i);
-}
 
 char	*ft_strrchr(const char *s, int c)
 {

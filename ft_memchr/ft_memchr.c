@@ -6,24 +6,16 @@
 /*   By: soaoki <soaoki@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 15:02:47 by soaoki            #+#    #+#             */
-/*   Updated: 2024/06/15 17:41:41 by soaoki           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:02:47 by soaoki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
-int	ft_strlen(char *c)
-{
-	int	i;
 
-	i = 0;
-	while (c[i] != 0)
-		i++;
-	return (i);
-}
-
-void	*ft_memchr(const void *s, int c, unsigned int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	int		i;
 	int		len;
